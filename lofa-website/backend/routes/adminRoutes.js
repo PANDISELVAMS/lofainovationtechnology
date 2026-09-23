@@ -4,7 +4,7 @@ import { upload } from "../utils/cloudinary.js";
 import { uploadImage } from "../controllers/uploadController.js";
 import { getBannerForAdmin, saveBanner } from "../controllers/bannerController.js";
 import crudController from "../controllers/crudController.js";
-
+import { testCloudinaryUpload } from "../controllers/cloudinaryTestController.js";
 import Service from "../models/Service.js";
 import Product from "../models/Product.js";
 import Portfolio from "../models/Portfolio.js";
@@ -15,9 +15,12 @@ const router = express.Router();
 
 // Every admin route requires the admin JWT
 router.use(protectAdmin);
+router.use(protectAdmin);
 
-// Image upload (used by Portfolio, Partners, Products, Banner forms)
+router.get("/cloudinary-test", testCloudinaryUpload);
+
 router.post("/upload", upload.single("image"), uploadImage);
+// Image upload (used by Portfolio, Partners, Products, Banner forms)
 
 // Launch Banner — single-record edit
 router.get("/banner", getBannerForAdmin);
