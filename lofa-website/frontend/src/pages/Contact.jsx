@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import useFetch from "../hooks/useFetch";
 
-const LOFA_EMAIL = "hello@lofa.dev";
+const LOFA_EMAIL = "lofainnovationtechnology@gmail.com";
 const initial = { name: "", email: "", phone: "", company: "", budget: "", enquiryType: "", message: "" };
 
 export default function Contact() {
@@ -50,7 +50,7 @@ export default function Contact() {
       </div>
       <div className="section !pt-0 grid gap-10 md:grid-cols-5">
         <div className="space-y-5 md:col-span-2">
-          {[{ icon: FaEnvelope, label: LOFA_EMAIL }, { icon: FaPhone, label: "+91 90000 00000" }, { icon: FaMapMarkerAlt, label: "Chennai, India" }].map((c) => (
+          {[{ icon: FaEnvelope, label: LOFA_EMAIL }, { icon: FaPhone, label: "+91 93448 81590" }, { icon: FaMapMarkerAlt, label: "Tiruppur-641652, India" }].map((c) => (
             <div key={c.label} className="glass-card flex items-center gap-4 p-5"><c.icon className="text-xl text-accent-400" /><span className="text-sm text-white/70">{c.label}</span></div>
           ))}
         </div>
