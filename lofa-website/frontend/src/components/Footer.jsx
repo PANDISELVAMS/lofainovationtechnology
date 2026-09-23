@@ -35,7 +35,7 @@ export default function Footer() {
         <div>
           <h4 className="mb-3 font-semibold">Get in touch</h4>
           <ul className="space-y-2 text-sm text-white/60">
-            <li><a href="mailto:hello@lofa.dev" className="hover:text-white">hello@lofa.dev</a></li>
+            <li><a href="mailto:lofainnovaationtechnology@gmail.com" className="hover:text-white">hello@lofa.dev</a></li>
             <li><Link to="/contact" className="hover:text-white">Contact Form</Link></li>
           </ul>
         </div>
