@@ -1,5 +1,5 @@
 import express from "express";
-import dotenv from "dotenv";
+import dotenv from "dotenv/config";
 import cors from "cors";
 
 import connectDB from "./config/db.js";
@@ -8,7 +8,6 @@ import publicRoutes from "./routes/publicRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
 import { notFound, errorHandler } from "./middleware/errorHandler.js";
 
-dotenv.config();
 
 const app = express();
 
