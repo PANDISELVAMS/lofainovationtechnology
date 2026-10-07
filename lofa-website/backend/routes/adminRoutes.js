@@ -14,14 +14,12 @@ import Position from "../models/Position.js";
 const router = express.Router();
 
 // Every admin route requires the admin JWT
-router.use(protectAdmin);
-router.use(protectAdmin);
-
+// TEMPORARY CLOUDINARY TEST
 router.get("/cloudinary-test", testCloudinaryUpload);
 
-router.post("/upload", upload.single("image"), uploadImage);
-// Image upload (used by Portfolio, Partners, Products, Banner forms)
+router.use(protectAdmin);
 
+router.post("/upload", upload.single("image"), uploadImage);
 // Launch Banner — single-record edit
 router.get("/banner", getBannerForAdmin);
 router.put("/banner", saveBanner);
