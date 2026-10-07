@@ -13,13 +13,13 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <WhyChooseUs />
       <ServicesGrid />
+      <TechStack />
+      <Portfolio />
       <LaunchBanner />
       <ProductsGrid />
-      <Portfolio />
       <ClientShowcase />
-      <WhyChooseUs />
-      <TechStack />
       <Testimonials />
     </>
   );
